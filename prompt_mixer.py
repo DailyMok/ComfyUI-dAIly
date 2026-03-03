@@ -158,7 +158,11 @@ class PromptMixerdAIly:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "csv_path": ("STRING", {"default": "", "multiline": False}),
+                "csv_path": ("STRING", {
+                    "default": "",
+                    "multiline": False,
+                    "defaultInput": True,           # ← MODIFICATION : widget présent + possibilité de connecter
+                }),
                 "template": ("STRING", {
                     "default": (
                         "A stunning graphic anime illustration image with one stunning young woman,\n"
@@ -215,9 +219,6 @@ class PromptMixerdAIly:
 
     def make_prompt(self, csv_path, template, flat_mode=True, seed=0, **kwargs):
         
-        # Si seed == 0 et qu'on n'est pas en mode "fixed" forcé par connexion,
-        # ComfyUI gère déjà randomize/increment → on peut laisser tel quel
-        # Mais pour cohérence on garde la logique "0 = random frais"
         if seed == 0:
             seed = int(time.time_ns() & 0x7FFFFFFF)
 
@@ -243,18 +244,12 @@ class PromptMixerdAIly:
         for k, v in used.items():
             prompt = prompt.replace("{" + k + "}", v)
 
-        # ────────────────────────────────────────────────
-        #  GESTION DU FLATTENING
-        # ────────────────────────────────────────────────
         if flat_mode:
-            # Mode original : tout sur une seule ligne
             prompt = " ".join(prompt.split())
         else:
-            # Mode paragraphes : on conserve la structure
             lines = []
             for line in prompt.splitlines():
-                lines.append(line.rstrip())  # enlève espaces de fin seulement
-
+                lines.append(line.rstrip())
             prompt = "\n".join(lines).strip()
 
         used_json = json.dumps({"seed": seed, **used}, ensure_ascii=False)

@@ -4,7 +4,7 @@ import comfy.sd
 import folder_paths
 import os
 
-class SimpleTokenDisplay:
+class TokenCounterdAIly:
     """
     Compte les tokens CLIP-L / T5 / Qwen et affiche uniquement une STRING formatée
     + met à jour le titre du node

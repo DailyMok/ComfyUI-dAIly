@@ -1,14 +1,14 @@
 # __init__.py
 
-from .token_counter import SimpleTokenDisplay
+from .token_counter import TokenCounterdAIly
 from .prompt_mixer import PromptMixerdAIly
 
 NODE_CLASS_MAPPINGS = {
-    "SimpleTokenDisplay": SimpleTokenDisplay,
+    "TokenCounterdAIly": TokenCounterdAIly,
     "PromptMixerdAIly": PromptMixerdAIly
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "SimpleTokenDisplay": "Token Info Display (CLIP / T5 / Qwen)",
+    "TokenCounterdAIly": "Token Count",
     "PromptMixerdAIly":   "Prompt Mixer dAIly (CSV Wildcards)"
 }
