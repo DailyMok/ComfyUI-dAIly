@@ -46,5 +46,4 @@ Set flat_mode:
 ON → single line prompt (classic ComfyUI style)
 OFF → preserves paragraphs and line breaks
 
-Use seed = 0 for random fresh value each time, or fix it for reproducibility
-Optional: override any field manually (takes priority over CSV)
+Override any field manually (takes priority over CSV)
