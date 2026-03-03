@@ -1,0 +1,15 @@
+{
+  "custom_nodes": [
+    {
+      "title": "dAIly Prompt & Token counter",
+      "author": "dAIly",
+      "description": "Smart token counter (CLIP-L / T5-XXL / Qwen) + prompt mixer via CSV wildcards (customizable and seedable)",
+      "reference": "https://github.com/dAIly/ComfyUI-dAIly",
+      "files": [
+        "https://github.com/dAIly/ComfyUI-dAIly.git"
+      ],
+      "install_type": "git-clone",
+      "tags": ["prompt", "token-counter", "csv", "wildcard", "utils", "text"]
+    }
+  ]
+}
