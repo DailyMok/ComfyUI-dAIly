@@ -1,4 +1,4 @@
-Markdown# ComfyUI-dAIly
+ComfyUI-dAIly
 
 Two handy custom nodes for ComfyUI to help with prompt crafting and token management:
 
