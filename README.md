@@ -24,11 +24,11 @@ Two handy custom nodes for ComfyUI to help with prompt crafting and token manage
 1. Open ComfyUI Manager  
 2. Search for **"dAIly Prompt & Token Utils"** (or just "dAIly")  
 3. Install
-
+<img width="880" height="793" alt="Capture d&#39;écran 2026-03-03 101342" src="https://github.com/user-attachments/assets/e50b3bfa-72b0-464c-bc93-a54d148e692f" />
 ### Manual install
 
 ```bash
 cd ComfyUI/custom_nodes
 git clone https://github.com/DailyMok/ComfyUI-dAIly.git
 
-<img width="880" height="793" alt="Capture d&#39;écran 2026-03-03 101342" src="https://github.com/user-attachments/assets/e50b3bfa-72b0-464c-bc93-a54d148e692f" />
+
