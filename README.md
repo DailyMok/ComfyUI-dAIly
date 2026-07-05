@@ -1,5 +1,24 @@
 ComfyUI-dAIly
 
+Update 05-07-2026
+
+## Prompt Mixer dAIly v2
+
+Added a new dynamic CSV prompt mixer node while keeping the original v1 node available.
+
+### New
+- New node: `Prompt Mixer dAIly v2 (Dynamic CSV)`.
+- CSV headers are used directly as prompt placeholders: `{HeaderName}`.
+- CSV file picker copies selected CSV files into the local `csv/` folder.
+- Refresh button reloads the current `csv_path` without copying.
+- Dynamic attribute inputs and outputs based on CSV headers.
+- Empty CSV columns are allowed, so attributes can be provided from upstream nodes.
+- `PROMPT` remains the first output.
+- Toggle to show/hide attribute outputs.
+- Template autocomplete for `{...}` placeholders from CSV headers.
+- Preserves manual node size on reload.
+
+
 Two handy custom nodes for ComfyUI to help with prompt crafting and token management:
 
 - **Token Info Display (CLIP / T5 / Qwen)**  
